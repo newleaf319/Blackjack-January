@@ -1,0 +1,27 @@
+// Programming state of mind //
+
+Not: 
+How do I code blackjack?
+
+But:
+What information must exist for this to work?
+
+
+Build a game of blackjack with an OOP approach by creating instances of that that class to represent each elements of the game
+
+
+Game State:
+-Player Hand
+-Dealer Hand
+-Control State 
+    -Hit 
+    -Stay
+    -Fold
+-Outcome State
+-The Deck
+-The Card
+    -Rank
+    -Suit
+    -Value for Face Cards
+
+

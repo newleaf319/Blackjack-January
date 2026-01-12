@@ -1,0 +1,24 @@
+Notes:
+
+In theory im saying if what the other person doenst have is a instance of the same card object return false python sees the
+instance is a card and proceeds this helps me from data type bugs.
+
+Going foward in the program with eq your telling python that two cards should be treated as the same card only if their 
+values (rank & suit) match. // 
+
+In python objects are compared by memory by default not by the values i put inside the instances. 
+For a situation like this i would be comparing values not memory comparison which is why the 
+Dunder Method  __eq__  come into effect:
+
+Memory Comparison:card1 is card2 
+Value Comparison: card1 == card2 
+
+Key Note: Dunder Methods are special built ins methods that define how objects behave with differnt type of operators
+& built ins.
+__str__ > best way to display text with objects instead of memory address representation
+__init__ > runs & sets up the objects data 
+__eq__ > compares two objects by thier value without python compares memory instead
+   
+
+
+
