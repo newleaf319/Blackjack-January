@@ -14,7 +14,7 @@ Memory Comparison:card1 is card2
 Value Comparison: card1 == card2 
 
 Key Note: Dunder Methods are special built ins methods that define how objects behave with differnt type of operators
-& built ins.
+& built ins or to compare other ojects.
 __str__ > best way to display text with objects instead of memory address representation
 __init__ > runs & sets up the objects data 
 __eq__ > compares two objects by thier value without python compares memory instead
@@ -23,5 +23,4 @@ Differance:
 print() // shows the value on the screen
 return // gives the value back to the program silently not the screen
 
-
-
+Build 

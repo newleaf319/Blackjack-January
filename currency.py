@@ -1,8 +1,22 @@
 class Currency:
-    def __init__(self, balance):
-        self.balance = balance  # stored value
 
-# update balance by adding/subtract the amount provided when called
+    RATES = {  # dictionary stores exchange rates relative to USD
+        'USD': 1.0,
+        'EUR': 0.92,
+        'GBP': 0.79
+    }
+
+    def __init__(self, balance, currency='USD'):
+        self.balance = balance
+        self.currency = currency
+
+    def convert_to(self, new_currency):
+        # this is how much the balance is worth in USD base rates
+        usd_value = self.balance / Currency.RATES[self.currency]
+        # mutiply to convert USD to the new passed in rate
+        self.balance = usd_value * Currency.RATES[new_currency]
+        self.currency = new_currency  # update the object so it knows what currency its now in
+
     def add(self, amount):
         self.balance += amount
 
@@ -10,13 +24,15 @@ class Currency:
         self.balance -= amount
 
     def __str__(self):
-        return f'Balance: ${self.balance}'
+        return f'Balance: ${round(self.balance,2)} {self.currency}'
 
 
-money1 = Currency(100)
+# show available currencies first
+print(f"Available Currencies: {', '.join((Currency.RATES.keys()))}")
 
-print(money1)
+# user input to pick currency
+start_currency = input('Choose your currency: ').upper()
+start_balance = float(input('Enter starting balance: '))
 
-money1.add(50)
-
-print(money1)
+# created money object
+money = Currency(start_balance, start_currency)

@@ -3,20 +3,15 @@ class Card:
         self.rank = rank
         self.suit = suit
 
-    # best way to display objects with text instead of memory address representation
     def __str__(self):
         return f'{self.rank} of {self.suit}'
 
-    # value comparison overall scope
     def __eq__(self, other):
-        # if the other thing is not a card they are not equal
-        if not isinstance(other, Card):
+        if not isinstance(other, Card):  # make sure other is a card
             return False
-        # cards are equal if the rank & suit match
-        return self.rank == other.rank and self.suit == other.suit
+        return self.__dict__ == other.__dict__  # dunder attribute to bundle init
 
-    # returns the blackjack value of this card
-    def value(self):
+    def value(self):  # card finds it suit then returns its rank value
         if self.rank in ['Jack', 'Queen', 'King']:
             return 10
         elif self.rank == 'Ace':
