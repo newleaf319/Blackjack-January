@@ -18,7 +18,6 @@ class Deck:
                 self.cards.append(Card(rank, suit))
 
     # randomly rearrange the deck
-
     def shuffle(self):
         random.shuffle(self.cards)
 
