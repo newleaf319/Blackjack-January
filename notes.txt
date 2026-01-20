@@ -17,10 +17,8 @@ Key Note: Dunder Methods are special built ins methods that define how objects b
 & built ins or to compare other ojects.
 __str__ > best way to display text with objects instead of memory address representation
 __init__ > runs & sets up the objects data 
-__eq__ > compares two objects by thier value without python compares memory instead
+__eq__ > compares two objects by thier value without it python compares memory instead
 
 Differance:
 print() // shows the value on the screen
 return // gives the value back to the program silently not the screen
-
-Build 

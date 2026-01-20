@@ -1,9 +1,13 @@
+from currency import Currency
+
+
 class Player:
 
-    def __init__(self, name='bryce'):
+    def __init__(self, name='Player'):
         self.name = name
         self.hand = []
         self.score = 0
+        self.money = Currency(100, 'USD')
 
     def __str__(self):
         return f'{self.name} has {len(self.hand)} cards in hand'
